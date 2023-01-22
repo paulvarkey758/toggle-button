@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Switch</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" name="switch" id="switch">
+        <label for="switch">
+            <div onclick="change()" class="s-box">
+                <img src="sun.png" alt="" class="icons">
+                <img src="moon.png" alt="" class="icons">
+                <div class="toggler"></div>
+            </div>
+        </label>
+    </div>
+
+    <script>
+        function change(){
+            var sw=document.getElementById("switch"); 
+            var tog=document.querySelector(".toggler");
+            if(sw.checked){
+                tog.classList.add("toggler-active");
+            }
+            else{
+                tog.classList.remove("toggler-active");
+            }
+        }
+        
+    </script>
+</body>
+</html>
